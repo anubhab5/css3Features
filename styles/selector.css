@@ -1,0 +1,74 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90vw;
+    height: auto;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.shadow {
+    box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.exp {
+    padding: 1rem;
+}
+
+.bold-font {
+    font-weight: 800;
+}
+
+h2 {
+    color: blue;
+    text-align: center;
+}
+
+
+/* DESCENDANT COMBINATOR */
+
+.descendant-combinator li p {
+    background-color: yellow;
+}
+
+
+/* CHILD COMBINATOR */
+
+.child-combinator li>p {
+    background-color: green;
+}
+
+.adjacent-sibling ul+p {
+    background-color: red;
+}
+
+.general-sibling ul~p {
+    background-color: red;
+}
+
+.pseudo-class h3:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.pseudo-element p::first-letter {
+    color: red;
+    font-size: 40px;
+}
+
+.pseudo-element p::first-line {
+    color: grey;
+    font-size: 20px;
+}
+
+.pseudo-element p::after {
+    content: url(../img/smiley.gif);
+}
+
+
+/* .pseudo-element p::before {
+    content: url(../img/smiley.gif);
+} */

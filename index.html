@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/selector.css" />
+</head>
+
+<body>
+    <div class="container shadow">
+        <h2>General Selectors</h2>
+        <hr />
+        <p>
+            <span class="bold-font">General selector</span> : Select elements based on name, id, class
+        </p>
+    </div>
+
+    <div class="container shadow">
+        <h2>Combinators</h2>
+
+        <div class='shadow'>
+            <h2>Descendant selector (space)</h2>
+            <hr>
+
+            <ul class='descendant-combinator'>
+                <li>
+                    <p>Para 1</p>
+                    <p>Para 1</p>
+                    <span>Span</span>
+                </li>
+                <li>
+                    <p>Para 1</p>
+                </li>
+                <li>
+                    <p>Para 1</p>
+                </li>
+            </ul>
+            <hr>
+            <div class='exp'>
+                The <code>p</code> tag is getting colored not <code>span</code>
+            </div>
+        </div>
+
+        <div class='shadow'>
+            <h2>Child Selector (>)</h2>
+            <hr>
+            <ul class='child-combinator'>
+                <li>
+                    <p>Para 1</p>
+                    <p>
+                        Para 2
+                        <div>
+                            <p>This is grand-child para not getting colored by child combinator</p>
+                        </div>
+                    </p>
+                    <span>Span</span>
+                </li>
+                <li>
+                    <p>Para 1</p>
+                </li>
+                <li>
+                    <p>Para 1</p>
+                </li>
+            </ul>
+            <hr>
+            <div class='exp'>
+                The grand-child <code>p</code> tag is getting colored.
+            </div>
+        </div>
+
+        <div class='shadow adjacent-sibling'>
+            <h2>Adjacent Sibling Selector (+)</h2>
+            <hr>
+            <ul>
+                <li>
+                    li 1
+                </li>
+                <li>
+                    <p>Para 1</p>
+                </li>
+                <li>
+                    <p>Para 1</p>
+                </li>
+            </ul>
+            <p>Paragraph _1</p>
+            <p>Paragraph _2</p>
+            <hr>
+            <div class='exp'>
+                Only the adjacent <code>p</code> tag that is sibling to <code>ul</code> is getting colored.
+
+            </div>
+        </div>
+
+        <div class='shadow general-sibling'>
+            <h2>Genral Sibling Selector (~)</h2>
+            <hr>
+            <ul>
+                <li>
+                    li 1
+                </li>
+                <li>
+                    <p>Para 1</p>
+                </li>
+                <li>
+                    <p>Para 1</p>
+                </li>
+            </ul>
+            <p>Paragraph _1</p>
+            <p>Paragraph _2</p>
+            <hr>
+            <div class='exp'>
+                All the <code>p</code> tags that are sibling to <code>ul</code> are getting colored.
+            </div>
+        </div>
+    </div>
+
+    <div class="container shadow pseudo-class">
+        <h2>CSS Pseudo-classes</h2>
+        <hr />
+        <h3>This is psudo-class</h3>
+        <hr>
+        <div class='exp'>
+            On hovering the above text the color changes.
+        </div>
+    </div>
+
+    <div class="container shadow pseudo-element">
+        <h2>CSS Pseudo-elements</h2>
+        <hr />
+        <span>
+            A CSS pseudo-element is used to style specified parts of an element. For example, it can be used to: Style the first letter, or line, of an element Insert content before, or after, the content of an element
+        </span>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum. Why do we use it? It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
+            Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+            default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        </p>
+        <hr>
+        <div class='exp'>
+            <ul>
+                <li>The First letter is colored red and higher font.</li>
+                <li>The first line is in grey.</li>
+                <li>A smiley is appended at the end of the paragraph.</li>
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
